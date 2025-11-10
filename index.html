@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dado Loco – Catálogo de juegos</title>
+  <meta name="description" content="Catálogo de juegos de mesa de Dado Loco: familiares, party y estrategia.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <h1 class="brand">🎲 Dado Loco</h1>
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#conocenos">Conócenos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-content">
+      <h2>Juegos que juntan a la banda</h2>
+      <p>Curaduría honesta: lo que sí prende la mesa y lo que mejor vende.</p>
+      <a class="btn" href="#catalogo">Ver catálogo</a>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="catalogo" class="catalogo">
+      <div class="topbar">
+        <h3>Catálogo</h3>
+        <input id="buscador" type="search" placeholder="Buscar por nombre, tipo o jugadores…" />
+        <select id="filtro">
+          <option value="">Todos</option>
+          <option value="Familiar">Familiar</option>
+          <option value="Party">Party</option>
+          <option value="Estrategia">Estrategia</option>
+          <option value="Cooperativo">Cooperativo</option>
+        </select>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="conocenos" class="conocenos">
+      <h3>Conócenos</h3>
+      <p>Somos Dado Loco: catálogo, reseñas y demostraciones para que elijas el juego ideal.  
+      En eventos armamos mesa y te enseñamos en 5 minutos.</p>
+      <div class="video">
+        <!-- cambia el ID por tu video si tienes -->
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Demostración Dado Loco" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h3>Contacto</h3>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5215555555555" target="_blank">55 5555 5555</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/dadoloco" target="_blank">@dadoloco</a></p>
+      <p><strong>Correo:</strong> <a href="mailto:hola@dadoloco.mx">hola@dadoloco.mx</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Dado Loco. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="thumb"></div>
+      <div class="content">
+        <h4 class="title"></h4>
+        <p class="meta"></p>
+        <p class="desc"></p>
+        <div class="actions">
+          <a class="btn btn-ghost" target="_blank">Ver reglas / trailer</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
