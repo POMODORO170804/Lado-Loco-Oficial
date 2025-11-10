@@ -1,0 +1,87 @@
+:root{
+  --bg:#f3e6c0;      /* beige base */
+  --ink:#3c2718;     /* café oscuro texto */
+  --muted:#7a563b;   /* café desaturado */
+  --card:#f8f2dd;    /* carta clara */
+  --edge:#b2845b;    /* dorado viejo */
+  --vino:#8b1e2d;    /* vino escudo */
+  --verde:#4f7b62;   /* verde botella */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Cinzel Decorative', serif;
+  letter-spacing:.2px;
+}
+
+a{color:var(--verde);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{max-width:1100px;margin:auto;padding:0 16px}
+
+/* NAV */
+.nav{position:sticky;top:0;background:var(--vino);border-bottom:4px solid var(--edge);z-index:20}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;color:#fff;text-decoration:none}
+.brand-logo{height:40px;width:auto;margin:8px 10px 8px 0}
+.brand-text{color:#fff;font-weight:700}
+.nav-links a{color:#fff;margin-left:16px;font-weight:700}
+
+/* HERO */
+.hero{position:relative;border-bottom:4px solid var(--edge)}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(600px 220px at 15% -10%, rgba(139,30,45,.25), transparent 60%),
+    radial-gradient(600px 220px at 85% -10%, rgba(79,123,98,.25), transparent 60%);
+}
+.hero-content{position:relative;padding:64px 0 48px;text-align:center}
+.hero-mark{width:140px;filter:drop-shadow(0 1px 0 #0001)}
+.hero h1{margin:14px 0 6px;font-size:40px}
+.hero p{margin:0 0 12px;color:var(--muted);font-size:18px}
+.btn{
+  display:inline-block;background:var(--vino);color:#fff;border:2px solid var(--edge);
+  padding:10px 16px;border-radius:8px;font-weight:700
+}
+.btn:hover{background:var(--verde);color:#fff}
+
+/* CATÁLOGO */
+.catalogo{padding:28px 0}
+.topbar{display:grid;grid-template-columns:1fr 260px 160px;gap:12px;align-items:center}
+.topbar h2{margin:0}
+#buscador,#filtro{
+  padding:10px 12px;border-radius:10px;border:2px solid var(--edge);background:#fff;color:var(--ink);
+  font-family:inherit
+}
+.grid{margin-top:16px;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{
+  background:var(--card);border:3px solid var(--edge);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column
+}
+.thumb{height:160px;background:#e9dbb7 center/cover no-repeat}
+.content{padding:12px 14px}
+.title{margin:0 0 6px;font-weight:700}
+.meta{margin:0 0 8px;color:var(--muted);font-size:14px}
+.desc{margin:0;color:#523a27;font-size:14px;line-height:1.35}
+.actions{margin-top:10px}
+.btn-ghost{background:transparent;color:var(--vino);border-color:var(--vino)}
+.btn-ghost:hover{background:var(--vino);color:#fff}
+
+/* SECCIONES */
+.conocenos,.contacto{padding:28px 0;border-top:4px solid var(--edge)}
+.video{margin-top:12px;aspect-ratio:16/9;border:3px solid var(--edge);border-radius:12px;overflow:hidden}
+.video iframe{width:100%;height:100%}
+.contact-list{list-style:none;margin:0;padding:0}
+.contact-list li{margin:6px 0}
+
+/* FOOTER */
+.footer{border-top:4px solid var(--edge);margin-top:36px}
+.footer .wrap{padding:16px 0;text-align:center;color:var(--muted)}
+
+@media (max-width:720px){
+  .topbar{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+}
